@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Angelyn Cruzat - Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  
+  <!-- Header Section -->
+<header>
+  <h1>Angelyn Cruzat</h1>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about-me">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#climate-action">Climate Action</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Scroll to Top Button -->
+<button id="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">
+  <span class="tooltip">Press to go back to top</span>
+</button>
+
+<!-- Music Button -->
+<button id="music-button" onclick="toggleMusic()">
+  🎶
+</button>
+
+<!-- Audio Player -->
+<audio id="music-player" style="display:none;" preload="auto">
+  <source src="https://soundcloud.com/witch-fox/cigarettes-after-sex-dreams?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+
+
+
+  <!-- HERO SECTION -->
+  <section id="hero">
+    <div class="hero-content">
+      <h1>Hello, I'm Angelyn Cruzat</h1>
+      <p>A BS Computer Science student passionate about making a difference through technology.</p>
+      <a href="#about-me" class="btn">Learn More About Me</a>
+    </div>
+  </section>
+
+<!-- ABOUT ME SECTION -->
+<section id="about-me" style="background-color: #f0f4f8; padding: 40px 0; color: #333;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <h2 style="text-align: center; font-family: 'Courier New', monospace; color: #ff69b4; font-size: 2.5rem; margin-bottom: 40px;">About Me</h2>
+    
+    <div class="bio" style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 30px; flex-wrap: wrap;">
+      <!-- Profile Picture -->
+      <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/ID%20PIC.jpg" alt="Angelyn Cruzat" class="profile-photo" style="border-radius: 50%; width: 200px; height: 200px; object-fit: cover; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" />
+      
+      <!-- Bio Text -->
+      <div class="bio-text" style="flex: 1; max-width: 600px; padding: 20px;">
+        <p style="font-family: 'Courier New', monospace; font-size: 1.1rem; color: #555; line-height: 1.6;">
+          I'm a dedicated computer science student with a passion for technology and environmental sustainability. I believe that by integrating technology with sustainability efforts, we can make significant strides in addressing global challenges.
+        </p>
+        <p style="font-family: 'Courier New', monospace; font-size: 1.1rem; color: #555; line-height: 1.6;">
+          Currently, I am focusing on how technology can contribute to achieving the Sustainable Development Goals (SDGs), particularly Climate Action.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SKILLS AND EXPERTISE SECTION -->
+<section id="skills-expertise" style="background-color: #f0f4f8; padding: 40px 0; color: #333;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+    <h2 style="text-align: center; font-family: 'Courier New', monospace; color: #ff69b4; font-size: 2.5rem; margin-bottom: 40px;">Skills and Expertise</h2>
+    <div class="skills" style="display: flex; flex-wrap: wrap; justify-content: space-between;">
+      
+      <!-- Technical Skills -->
+      <div class="skill-category" style="background-color: #ffffff; padding: 20px; margin: 15px; border-radius: 10px; width: 30%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+        <h3 style="font-family: 'Courier New', monospace; color: #333; font-size: 1.8rem; margin-bottom: 20px;">Technical Skills</h3>
+        <ul style="list-style: none; padding: 0; color: #555;">
+          <li>Problem Solving and Algorithm Development</li>
+          <li>Responsive Web Design</li>
+          <li>Version Control (Git/GitHub)</li>
+        </ul>
+      </div>
+
+      <!-- Programming Languages -->
+      <div class="skill-category" style="background-color: #ffffff; padding: 20px; margin: 15px; border-radius: 10px; width: 30%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+        <h3 style="font-family: 'Courier New', monospace; color: #333; font-size: 1.8rem; margin-bottom: 20px;">Programming Languages</h3>
+        <ul style="list-style: none; padding: 0; color: #555;">
+          <li>Python</li>
+          <li>C++</li>
+          <li>HTML and JavaScript</li>
+        </ul>
+      </div>
+
+      <!-- Other Expertise -->
+      <div class="skill-category" style="background-color: #ffffff; padding: 20px; margin: 15px; border-radius: 10px; width: 30%; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;">
+        <h3 style="font-family: 'Courier New', monospace; color: #333; font-size: 1.8rem; margin-bottom: 20px;">Other Expertise</h3>
+        <ul style="list-style: none; padding: 0; color: #555;">
+          <li>Graphic Design (Canva, Figma)</li>
+          <li>Creative Writing</li>
+          <li>Performing Arts (Singing and Dancing)</li>
+          <li>Music Production (DAWs like FL Studio, GarageBand, Bandlab)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- HOBBIES AND INTERESTS SECTION -->
+<section id="hobbies-interests" style="background-color: #f4f4f4; padding: 40px 20px; text-align: center;">
+  <div class="container" style="max-width: 1200px; margin: 0 auto;">
+    <h2 style="font-family: 'Courier New', monospace; font-size: 2.5rem; color: #333; margin-bottom: 20px;">Hobbies and Interests</h2>
+    <p style="font-family: 'Arial', sans-serif; font-size: 1.1rem; color: #555; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+      Beyond my technical expertise, I am deeply passionate about creative pursuits. I enjoy writing, singing, and dancing, which have allowed me to express myself and develop confidence over the years. Additionally, I love producing music, experimenting with digital audio workstations to create original compositions. These hobbies help me stay balanced, fuel my creativity, and inspire innovation in my projects.
+    </p>
+  </div>
+</section>
+
+
+<!-- PROJECT SHOWCASE SECTION -->
+<section id="projects">
+  <div class="container">
+    <h2>Projects</h2>
+    <p>
+      Here are some of the projects I've worked on, showcasing my dedication to technology, creativity, and advocacy. These initiatives reflect my skills, values, and passion for making a positive impact.
+    </p>
+  </div>
+
+  <!-- Project AKAY Card -->
+  <div class="project-card">
+    <div class="project-info">
+      <h3>Project AKAY</h3>
+      <p>
+        "Project AKAY" (Attaining Keen Environmental Advocacy spearheaded by the Youth) is an advocacy campaign launched in 2022 to inspire action towards environmental sustainability. With the vision of "leading by the hand to save nature for a better future," the project focused on raising awareness and engaging the community through social media and on-ground initiatives.
+      </p>
+      <ul>
+        <li><strong>SDG Alignment:</strong> Climate Action (Goal 13)</li>
+        <li>
+          <strong>Social Media Pages:</strong>
+          <a href="https://web.facebook.com/o2getherwecan" target="_blank" rel="noopener">Facebook</a>,
+          <a href="https://www.instagram.com/project_akay?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener">Instagram</a>,
+          <a href="https://www.tiktok.com/@project_akay?_t=8rk7lrBHxM0&_r=1" target="_blank" rel="noopener">TikTok</a>
+        </li>
+        <li>
+          <strong>Website:</strong>
+          <a href="https://rosaelainedeleonma.wixsite.com/projectakay2022?fbclid=IwY2xjawGzqmtleHRuA2FlbQIxMAABHcS5Az4KUqlw7wfvZOF2XTyFxUN8Rs_e8JMZ_G7o4xA0EWZthOGk1_dQqg_aem_BSa_okucdBtutelQTa_RQg" target="_blank" rel="noopener">Visit Project AKAY Website</a>
+        </li>
+      </ul>
+    </div>
+    <div class="project-media">
+      <div class="project-image">
+        <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/317550141_137191165795505_5778312452854030968_n.jpg" alt="Image for Project AKAY: Together We Can by Angelyn Cruzat" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Facebook Video Embed -->
+  <div class="project-card">
+    <div class="project-media">
+      <h3>"Together We Can" by Angelyn A. Cruzat</h3>
+      <!-- Embed Facebook Video -->
+      <iframe
+        src="https://www.facebook.com/plugins/video.php?height=318&href=https%3A%2F%2Fweb.facebook.com%2Fo2getherwecan%2Fvideos%2F8657249141013255%2F&show_text=false&width=560&t=0"
+        width="100%"
+        height="315"
+        style="border:none;overflow:hidden"
+        scrolling="no"
+        frameborder="0"
+        allowfullscreen="true"
+        allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+      ></iframe>
+    </div>
+  </div>
+
+  <!-- Coastal Cleanup -->
+  <div class="project-card">
+    <div class="project-info">
+      <h3>Coastal Cleanup</h3>
+      <p> 
+        "Happiness is a state of inner fulfillment"
+      </p>
+      <p>
+        Remembering the moment we had a sight of the setting. It was chaos, to be described. There are plastics everywhere and other human wastes scattered around the place. Environmental damage or degradation is the deterioration of the environment through depletion of resources such as air, water and soil; the destruction of ecosystems and the extinction of wildlife. It is defined as any change or disturbance to the environment perceived to be deleterious or undesirable. Of course, we wouldn't stop these on one 'go'.
+      </p>
+      <p>
+        So, O2getherWEcan made one's way to make a simple change despite the complex issues about our home, the earth. The coastal clean up was one of our unforgettable experiences. It was tiring yet, fulfilling. We had a lot of fun picking up the plastics and disposable masks. The bond we made there was meaningful. We shared laughs as we also help with freshening up the coast's air. Among all the environmental destruction, it is time be the one who makes the world safer. Be one of us, message us, and be part of the O2getherWEcan. 
+      </p>
+    </div>
+    <div class="project-media">
+      <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/325655699_848383636263852_5838103823565067857_n.jpg" alt="Coastal Cleanup" />
+    </div>
+  </div>
+
+  <!-- Achievements Section (Awards) -->
+  <div class="achievement-section">
+    <h3>Our Achievements</h3>
+    <p>Here are some of the awards and recognitions we've received for our dedication to environmental advocacy:</p>
+    
+    <div class="award-images">
+      <div class="award-item">
+        <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/332268698_711871493975364_5758141903738265372_n.jpg" alt="Award 1">
+      </div>
+      <div class="award-item">
+        <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/330309477_3263123844018281_8576545206308896088_n.jpg" alt="Award 2">
+      </div>
+      <div class="award-item">
+        <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/330328943_1139062980108295_2366531397034497166_n.jpg" alt="Award 3">
+      </div>
+      <div class="award-item">
+        <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/329984119_1301030634095917_4253447295299043936_n.jpg" alt="Award 4">
+      </div>
+      <div class="award-item">
+        <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/329608589_3337432403251627_4920303326802678482_n.jpg" alt="Award 5">
+      </div>
+      <div class="award-item">
+        <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/329899371_9407168652630449_8761324465204415399_n.jpg" alt="Award 6">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- SDG Feature Section -->
+<section id="climate-action" style="background-image: url('https://assets.onecompiler.app/42yxwse34/42zbn5ku3/th%20(1).jpg'); background-size: cover; background-position: center; padding: 40px;">
+  <div class="sdg-container">
+    <!-- Section Title -->
+    <h1 style="font-family: Courier new ; text-align: center; font-size: 2rem; color: white; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);">
+      SDG Feature: Climate Action (SDG 13)
+    </h1>
+
+    <!-- Image -->
+    <div class="image-container" style="text-align: center; margin-bottom: 20px;">
+      <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/54be628a46a2b610be38db1c44d4de29.jpg" 
+           alt="Climate Action" 
+           style="border: 5px solid green; max-width: 35%; height: auto; border-radius: 4px;" />
+    </div>
+
+    <!-- Additional Content -->
+    <p style="font-family: Monospace; font-size: 1.5rem; color: white; line-height: 1.8; text-align: center; text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);">
+      Climate action is essential to mitigate the impacts of global warming, build resilience, and ensure a sustainable future. 
+      Through innovative policies, education, and international collaboration, we can address climate change effectively. 
+    </p>
+  </div>
+</section>
+
+    
+    <!-- Card for What is Climate Action -->
+    <div class="sdg-card">
+      <h3 style="font-family: Courier;">What is Climate Action?</h3>
+      <p style="font-family: Courier;">
+        Climate Action (SDG 13) calls for urgent efforts to combat climate change and its impacts. As global temperatures rise, we face extreme weather events, rising sea levels, and devastating effects on communities and ecosystems. According to the UN, immediate action is critical to reducing emissions and building resilience.
+      </p>
+    </div>
+    
+    <!-- THE TARGETS Section -->
+    <div class="sdg-card">
+      <h3 style="font-family: Courier;">THE TARGETS</h3>
+      <p style="font-family: Courier;">
+        Everyone can help to make sure that we meet the Global Goals. Use these five targets to create action to combat climate change.
+      </p>
+    </div>
+          <style>
+            .target {
+              display: flex;
+              align-items: center;
+              margin: 20px 0;
+              background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for cards */
+              padding: 20px;
+              padding: 15px;
+              border-radius: 10px;
+              box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for better aesthetics */
+            }
+          
+            .target img {
+              border-radius: 8px;
+              margin-right: 20px; /* Add space between image and text */
+            }
+          
+            .target p {
+              font-family: Courier, monospace;
+              color: black;
+              line-height: 1.5; /* Better line spacing for text readability */
+              margin: 0; /* Remove default margin */
+            }
+          </style>
+          
+          <!-- Target 13.1 -->
+          <div class="target" style="font-size: 1rem;">
+            <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/MC_Target_13.1.png" alt="Target 13.1 Image" style="width: 35%; height: auto;" />
+            <p>
+              <strong>Strengthen resilience and adaptive capacity to climate-related hazards and natural disasters in all countries.</strong>
+            </p>
+          </div>
+          
+          <!-- Target 13.2 -->
+          <div class="target" style="font-size: 1rem;">
+            <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/download.png" alt="Target 13.2 Image" style="width: 35%; height: auto;" />
+            <p>
+              <strong>Integrate climate change measures into national policies, strategies and planning.</strong>
+            </p>
+          </div>
+          
+          <!-- Target 13.3 -->
+          <div class="target" style="font-size: 1rem;">
+            <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/MC_Target_13.3.png" alt="Target 13.3 Image" style="width: 35%; height: auto;" />
+            <p>
+              <strong>Improve education, awareness-raising and human and institutional capacity on climate change mitigation, adaptation, impact reduction, and early warning.</strong>
+            </p>
+          </div>
+          
+          <!-- Target 13.4 -->
+          <div class="target" style="font-size: 1rem;">
+            <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/MC_Target_13.A.png" alt="Target 13.4 Image" style="width: 35%; height: auto;" />
+            <p>
+              <strong>Implement the commitment undertaken by developed-country parties to the United Nations Framework Convention on Climate Change to a goal of mobilizing jointly $100 billion annually by 2020 from all sources to address the needs of developing countries in the context of meaningful mitigation actions and transparency on implementation and fully operationalize the Green Climate Fund through its capitalization as soon as possible.</strong>
+            </p>
+          </div>
+          
+          <!-- Target 13.5 -->
+          <div class="target" style="font-size: 1rem;">
+            <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/MC_Target_13.B.png" alt="Target 13.5 Image" style="width: 35%; height: auto;" />
+            <p>
+              <strong>Promote mechanisms for raising capacity for effective climate change-related planning and management in least developed countries and small island developing States, including focusing on women, youth, and local and marginalized communities.</strong>
+            </p>
+          </div>
+
+ <!-- Card for Why Climate Action Matters Locally -->
+<div class="sdg-card" style="background-color: #fffbf7; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <h3 style="font-family: 'Courier New', monospace; text-align: center; color: #ff69b4;">Why Climate Action Matters Locally</h3>
+  <p style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6; text-align: justify;">
+    In my hometown of Agoncillo, climate change is not just a global issue—it’s personal. Our community has endured natural disasters like the Taal eruption and typhoons, which were exacerbated by environmental changes. These events highlight the urgent need for both local and global action to protect our planet and future generations.
+  </p>
+</div>
+
+<!-- Card for My Contribution to Climate Action -->
+<div class="sdg-card" style="background-color: #fffbf7; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <h3 style="font-family: 'Courier New', monospace; text-align: center; color: #ff69b4;">My Contribution to Climate Action</h3>
+  <p style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6;">
+    Through Project AKAY (Attaining Keen Environmental Advocacy spearheaded by the Youth), I have actively participated in climate advocacy. This initiative:
+  </p>
+  <ul style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6;">
+    <li>Conducted digital campaigns to raise awareness about environmental sustainability.</li>
+    <li>Reached over 10,000 people online via social media platforms like Facebook, Instagram, and TikTok.</li>
+    <li>Organized community clean-up drives and tree-planting activities to reduce waste and promote greener spaces.</li>
+  </ul>
+</div>
+
+<!-- Card for How My Skills Align with SDG 13 -->
+<div class="sdg-card" style="background-color: #fffbf7; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <h3 style="font-family: 'Courier New', monospace; text-align: center; color: #ff69b4;">How My Skills Align with SDG 13</h3>
+  <p style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6;">
+    As a Computer Science student, I leverage my technical skills to support Climate Action by:
+  </p>
+  <ul style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6;">
+    <li>Using technology to create digital platforms that educate communities on sustainability.</li>
+    <li>Building tools and apps to track carbon footprints and promote eco-friendly practices.</li>
+  </ul>
+</div>
+
+<!-- Card for Looking Ahead -->
+<div class="sdg-card" style="background-color: #fffbf7; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <h3 style="font-family: 'Courier New', monospace; text-align: center; color: #ff69b4;">Looking Ahead</h3>
+  <p style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6;">
+    In the future, I aim to develop software solutions and online campaigns that further empower communities to combat climate change. Together, we can build a sustainable future for everyone.
+  </p>
+</div>
+
+<!-- Card for What You Can Do -->
+<div class="sdg-card" style="background-color: #fffbf7; padding: 20px; margin-bottom: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <h3 style="font-family: 'Monospace', monospace; text-align: center; color: #ff69b4;">What You Can Do</h3>
+  <p style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6; text-align: center;">
+    Here are some ways you can contribute to SDG 13:
+  </p>
+  <ul style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6;">
+    <li>
+      Reduce Waste: Practice the 3Rs—Reduce, Reuse, and Recycle.
+      <!-- Image for Reduce Waste -->
+      <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/6beb5e82bc954909d45cc5d1a0fd71b2.jpg" alt="Reduce Waste" style="display: block; margin-top: 10px; width: 35%; height: auto; border-radius: 8px; margin-left: auto; margin-right: auto;"/>
+    </li>
+    <li>
+      Conserve Energy: Switch off unused appliances and opt for renewable energy sources.
+      <!-- Image for Conserve Energy -->
+      <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/bd36cf2707ac61449fe151df2147ef96.jpg" alt="Conserve Energy" style="display: block; margin-top: 10px; width: 35%; height: auto; border-radius: 8px; margin-left: auto; margin-right: auto;"/>
+    </li>
+    <li>
+      Advocate for Change: Join or support local initiatives like Project AKAY to inspire others.
+      <!-- Image for Advocate for Change -->
+      <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/94e879bbadbe73cd04324c4667775895.jpg" alt="Advocate for Change" style="display: block; margin-top: 10px; width: 35%; height: auto; border-radius: 8px; margin-left: auto; margin-right: auto;"/>
+    </li>
+  </ul>
+</div>
+
+
+<!-- Card for Learn More -->
+<div class="sdg-card" style="background-color: #f8f9fa; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+  <h3 style="font-family: 'Courier New', monospace; text-align: center; color: #333; font-size: 2rem; margin-bottom: 20px;">Learn More</h3>
+  <ul style="font-family: 'Courier New', monospace; list-style: none; padding: 0; margin: 0; color: #333;">
+    <li style="margin-bottom: 15px;">
+      <a href="https://sdgs.un.org/goals/goal13" target="_blank" rel="noopener" style="text-decoration: none; color: #007bff; font-size: 1.1rem; display: flex; align-items: center; transition: all 0.3s ease;">
+        <img src="https://assets.onecompiler.app/42yxwse34/42zbn5ku3/SDGS-1.webp" alt="UN SDG 13 Logo" style="width: 30px; height: 30px; margin-right: 10px;"/>
+        Explore the United Nations' official page for SDG 13: Climate Action
+      </a>
+    </li>
+    <li style="margin-bottom: 15px;">
+      <a href="https://web.facebook.com/o2getherwecan" target="_blank" rel="noopener" style="text-decoration: none; color: #007bff; font-size: 1.1rem; display: flex; align-items: center; transition: all 0.3s ease;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook Logo" style="width: 30px; height: 30px; margin-right: 10px;"/>
+        Check out Project AKAY on Facebook
+      </a>
+    </li>
+    <li style="margin-bottom: 15px;">
+      <a href="https://www.instagram.com/project_akay?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener" style="text-decoration: none; color: #007bff; font-size: 1.1rem; display: flex; align-items: center; transition: all 0.3s ease;">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt="Instagram Logo" style="width: 30px; height: 30px; margin-right: 10px;"/>
+        Check out Project AKAY on Instagram
+      </a>
+    </li>
+    <li style="margin-bottom: 15px;">
+      <a href="https://www.tiktok.com/@project_akay?_t=8rk7lrBHxM0&_r=1" target="_blank" rel="noopener" style="text-decoration: none; color: #007bff; font-size: 1.1rem; display: flex; align-items: center; transition: all 0.3s ease;">
+        <img src="https://img.icons8.com/color/48/tiktok.png" alt="TikTok Logo" style="width: 30px; height: 30px; margin-right: 10px;"/>
+        Check out Project AKAY on TikTok
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+<!-- Contact Section -->
+<section id="contact" style="background-color: #fff5f8; padding: 50px 20px; text-align: center;">
+  <h2 style="font-family: 'Courier New', monospace; color: #ff69b4;">Contact Me</h2>
+  <p style="font-family: 'Courier New', monospace; color: #555; line-height: 1.6;"> Feel free to reach out to me through social media, email, or check out my GitHub and OneCompiler profiles for my latest projects and code samples.</p>
+  <div class="contact-icons" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+    <div class="icon">
+      <a href="https://www.facebook.com/angelyn.cruzat/about" target="_blank">
+        <img src="https://img.icons8.com/color/48/facebook.png" alt="Facebook" style="transition: transform 0.3s ease;">
+      </a>
+    </div>
+    <div class="icon">
+      <a href="https://www.instagram.com/aencruzt/" target="_blank">
+        <img src="https://img.icons8.com/color/48/instagram-new.png" alt="Instagram" style="transition: transform 0.3s ease;">
+      </a>
+    </div>
+    <div class="icon">
+      <a href="https://x.com/angelyn_crzt" target="_blank">
+        <img src="https://img.icons8.com/color/48/twitter.png" alt="Twitter" style="transition: transform 0.3s ease;">
+      </a>
+    </div>
+    <div class="icon">
+      <a href="https://www.tiktok.com" target="_blank">
+        <img src="https://img.icons8.com/color/48/tiktok.png" alt="TikTok" style="transition: transform 0.3s ease;">
+      </a>
+    </div>
+    <div class="icon">
+      <a href="#" onclick="copyToClipboard('angelyncruzat123@gmail.com')">
+        <img src="https://img.icons8.com/color/48/email.png" alt="Email" style="transition: transform 0.3s ease;">
+      </a>
+    </div>
+    <div class="icon">
+      <a href="https://github.com/AENCRUZ" target="_blank">
+        <img src="https://img.icons8.com/color/48/github.png" alt="GitHub" style="transition: transform 0.3s ease;">
+      </a>
+    </div>
+    <div class="icon">
+      <a href="https://onecompiler.com/profile/Angelyn-Cruzat" target="_blank">
+        <img src="https://img.icons8.com/color/48/code.png" alt="OneCompiler" style="transition: transform 0.3s ease;">
+      </a>
+</div>
+
+  </div>
+</section>
+
+
+<!-- Script to Copy Email -->
+<script>
+  function copyToClipboard(email) {
+    const input = document.createElement('input');
+    input.value = email;
+    document.body.appendChild(input);
+    input.select();
+    document.execCommand('copy');
+    document.body.removeChild(input);
+    alert('Email copied to clipboard!');
+  }
+</script>

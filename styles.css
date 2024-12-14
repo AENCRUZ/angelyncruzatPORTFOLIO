@@ -1,0 +1,649 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Monospace, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* HEADER SECTION */
+header {
+  background-color: #ffb6c1;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #000;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+/* Button Styles */
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ffb6c1; /* Soft pink color */
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer;
+  z-index: 1000;
+  text-align: center;
+  line-height: 60px;
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add soft shadow */
+  opacity: 100;
+
+}
+
+#back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+#back-to-top:hover {
+  background-color: #ffc0cb;
+  transform: scale(1.1);
+}
+
+#back-to-top::before {
+  content: '❤️'; /* Heart icon */
+  font-size: 30px;
+  position: relative;
+  top: 3px;
+}
+
+/* Tooltip Styles */
+#back-to-top .tooltip {
+  visibility: hidden; 
+  background-color: black;
+  color: #ff66b2;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: 50px; 
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  font-size: 12px;
+}
+
+#back-to-top:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Make sure the tooltip doesn't overflow */
+#back-to-top .tooltip:after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}
+
+/* Music Button */
+#music-button {
+  background-color: #ffb6c1; /* Soft pink color */
+  color: white;
+  border: none;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 28px;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transition: all 0.3s ease;
+  position: fixed;
+  bottom: 20px;
+  right: 90px;
+}
+
+#music-button:hover {
+  background-color: #ffc0cb;
+  transform: scale(1.2);
+}
+
+/* Audio Player (Hidden by Default) */
+#audio-player {
+  display: none;
+}
+
+
+
+/* HERO SECTION */
+#hero {
+  background: url('https://assets.onecompiler.app/42yxwse34/42zbn5ku3/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vMzRlMzhlOGQtOGU4YS00ZWMyLThhN2YtMmQ0ZjQzN2ZlOTA4LmpwZWc.webp') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to the heading text */
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  margin: 20px 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Adds shadow to the heading text */
+}
+
+.btn {
+  background-color: #ffc0cb;
+  color: #000;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  background-color: #ffb6c1;
+}
+
+/* ABOUT ME SECTION */
+#about-me {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about-me h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+#about-me h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #ffc0cb;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .bio {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+.profile-photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #ffc0cb;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile-photo:hover {
+  transform: scale(1.1);
+}
+
+.bio-text {
+  max-width: 600px;
+  font-size: 1.2rem;
+  color: #555;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+.bio-text p {
+  margin-bottom: 15px;
+  text-indent: 20px;
+}
+/* Horizontal line styling */
+.section-divider {
+  border: none;
+  height: 2px;
+  background-color: #ffc0cb;  /* Same color as the line in the h2 */
+  margin: 40px 0;  /* Adjust spacing as needed */
+}
+
+
+/* SKILLS AND EXPERTISE SECTION */
+#skills-expertise {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#skills-expertise h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+}
+
+#skills-expertise h2::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 4px;
+  background-color: #ffc0cb;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
+
+.skill-category {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  max-width: 300px;
+  flex:1 1 calc(33.333% - 30px);
+}
+/* Hobbies and Interests Section */
+#hobbies-interests {
+  background-color: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#hobbies-interests h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#hobbies-interests p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.8;
+  text-align: justify;
+  text-indent: 20px;
+}
+
+
+/* PROJECT SHOWCASE SECTION */
+#projects {
+  background-color: #ffc0cb;  /* Pink background for the section behind the cards */
+  text-align: center;  /* Centers the text inside the section */
+  padding: 60px 20px;
+  position: relative; /* Ensures the section's background is applied */
+  z-index: 1; /* Ensures it's above any other content */
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#projects p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #555;
+  line-height: 1.8;
+}
+
+/* Project Card */
+.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #f9f9f9; /* White background for each card */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Adjusted margin for consistent spacing */
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 2; /* Ensures it's above the section's background */
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Info */
+.project-info {
+  flex: 1 1 50%;
+  padding: 20px;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.project-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.project-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.project-info ul li {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.project-info ul li strong {
+  color: #333;
+}
+
+.project-info ul li a {
+  color: #ff5c8d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.project-info ul li a:hover {
+  color: #ff2a5a;
+}
+
+/* Project Media */
+.project-media {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+.project-media img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-media img:hover {
+  transform: scale(1.05);
+}
+
+.project-media iframe {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-media iframe:hover {
+  transform: scale(1.03);
+}
+
+.project-media h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+/* Fix large space issue between project cards */
+.project-card + .project-card {
+  margin-top: 20px; /* Ensure margin-top is uniform for successive cards */
+}
+
+/* Responsive Design for Projects */
+@media (max-width: 1024px) {
+  .project-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-info,
+  .project-media {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .project-info {
+    padding: 0 0 20px 0;
+  }
+
+  .project-media img,
+  .project-media iframe {
+    max-width: 100%;
+  }
+
+  /* Remove extra margin between cards in mobile view */
+  .project-card + .project-card {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  #projects h2 {
+    font-size: 2rem;
+  }
+
+  #projects p {
+    font-size: 1rem;
+  }
+
+  .project-info h3 {
+    font-size: 1.75rem;
+  }
+
+  .project-info p,
+  .project-info ul li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Achievements Section */
+.achievement-section {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #fff;
+}
+
+.achievement-section h3 {
+  font-size: 2.5rem;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.achievement-section p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+/* Award Images */
+.award-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.award-item {
+  width: 300px;  /* Adjust based on desired image size */
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.award-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.award-item img:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive Design for Achievements */
+@media (max-width: 768px) {
+  .award-item {
+    width: 100%;  /* Stack the images on smaller screens */
+  }
+}
+
+
+/* SDG Feature Section */
+#sdg-feature {
+  background-size: cover; /* Image will cover the section */
+  background-position: center; /* Center the background image */
+  padding: 40px;
+}
+
+.sdg-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  color: white; /* Text color to contrast with the background image */
+}
+
+/* SDG Cards */
+.sdg-card {
+  background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for cards */
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sdg-card h3 {
+  font-family: Courier, monospace;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.sdg-card p, .sdg-card ul {
+  font-family: Courier, monospace;
+  font-size: 1rem;
+  color: #333;
+}
+
+.sdg-card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.sdg-card a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.sdg-card a:hover {
+  text-decoration: underline;
+}
+
+
+/* UN Logo for SDG 13 */
+.sdg-card a img {
+  width: 30px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+
+
+
+
+
+/* CONTACT SECTION */
+#contact {
+  background-color: #fff;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-icons .icon img {
+  width: 50px;
+  height: 50px;
+}
